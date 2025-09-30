@@ -632,7 +632,6 @@ let StringEditor = class extends i {
     this.value = target.value;
     this.dispatchEvent(
       new CustomEvent("value-changed", {
-        detail: { value: this.value },
         bubbles: true
       })
     );
@@ -660,7 +659,7 @@ StringEditor.styles = i$3`
 
     label {
       font-weight: bold;
-      color: var(--color-gray-90);
+      color: #333;
     }
 
     textarea {
@@ -675,8 +674,8 @@ StringEditor.styles = i$3`
 
     textarea:focus {
       outline: none;
-      border-color: var(--color-blue-50);
-      box-shadow: 0 0 0 2px var(--color-blue-20);
+      border-color: #2196f3;
+      box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
     }
   `;
 __decorateClass([
@@ -696,15 +695,12 @@ let ObjectEditor = class extends i {
     const target = event.target;
     try {
       this.value = JSON.parse(target.value);
-      target.setCustomValidity("");
       this.dispatchEvent(
         new CustomEvent("value-changed", {
-          detail: { value: this.value },
           bubbles: true
         })
       );
     } catch {
-      target.setCustomValidity("Invalid JSON");
     }
   }
   render() {
@@ -731,7 +727,7 @@ ObjectEditor.styles = i$3`
 
     label {
       font-weight: bold;
-      color: var(--color-gray-90);
+      color: #333;
     }
 
     textarea {
@@ -746,13 +742,13 @@ ObjectEditor.styles = i$3`
 
     textarea:focus {
       outline: none;
-      border-color: var(--color-blue-50);
-      box-shadow: 0 0 0 2px var(--color-blue-20);
+      border-color: #2196f3;
+      box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
     }
 
     textarea:invalid {
-      border-color: var(--color-red-50);
-      box-shadow: 0 0 0 2px var(--color-red-20);
+      border-color: #f44336;
+      box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.2);
     }
   `;
 __decorateClass([
@@ -819,7 +815,7 @@ DemoEditors.styles = i$3`
     }
 
     h2 {
-      color: var(--color-gray-90);
+      color: #333;
       margin-bottom: 24px;
     }
 
@@ -857,4 +853,4 @@ __decorateClass([
 DemoEditors = __decorateClass([
   t("demo-editors")
 ], DemoEditors);
-//# sourceMappingURL=index-CUttL55z.js.map
+//# sourceMappingURL=index-DpAf4rjB.js.map
