@@ -767,12 +767,7 @@ let DemoEditors = class extends i {
   constructor() {
     super(...arguments);
     this.initialStringValue = "Hello, World!";
-    this.initialObjectValue = {
-      name: "Example",
-      count: 42,
-      enabled: true,
-      items: ["item1", "item2"]
-    };
+    this.initialObjectValue = {};
     this.stringModified = false;
     this.objectModified = false;
   }
@@ -853,4 +848,4 @@ __decorateClass([
 DemoEditors = __decorateClass([
   t("demo-editors")
 ], DemoEditors);
-//# sourceMappingURL=index-DpAf4rjB.js.map
+//# sourceMappingURL=index-CKuzPQsU.js.map

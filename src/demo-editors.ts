@@ -144,12 +144,7 @@ export class ObjectEditor extends LitElement {
 export class DemoEditors extends LitElement {
   private initialStringValue: string = "Hello, World!";
 
-  private initialObjectValue: object = {
-    name: "Example",
-    count: 42,
-    enabled: true,
-    items: ["item1", "item2"],
-  };
+  private initialObjectValue: object = {};
 
   @state()
   private stringModified: boolean = false;
